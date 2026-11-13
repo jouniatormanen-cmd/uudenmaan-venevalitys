@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102c40">
+<meta name="description" content="Tarjoa venettä Aava Marinen välitettäväksi. Kerro veneestäsi ja pyydä yhteydenottoa.">
+<title>Tarjoa venettä välitykseen – Aava Marine</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<style>
+.offer-hero{padding:55px max(7vw,calc((100vw - 980px)/2));background:linear-gradient(110deg,#102c40,#315a70);color:#fff}
+.offer-hero h1{max-width:760px;margin:0 0 14px;font:600 clamp(36px,6vw,58px)/1.08 var(--serif)}
+.offer-hero p:last-child{max-width:650px;color:#e0e8eb}
+.offer-wrap{max-width:980px;margin:auto;padding:48px 22px 70px}
+.offer-intro{max-width:720px;margin:0 auto 28px;color:var(--muted)}
+.offer-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:26px;background:#fff;border:1px solid #e1e4e1;border-radius:12px;box-shadow:0 10px 30px #102c400d}
+.offer-form fieldset{grid-column:1/-1;border:0;border-top:1px solid #e7e9e6;padding:18px 0 0;margin:4px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.offer-form legend{padding:0 10px 0 0;color:var(--navy);font:600 21px var(--serif)}
+.offer-form label{display:grid;gap:6px;margin:0;color:var(--navy)}
+.offer-form label.full,.offer-form .full{grid-column:1/-1}
+.offer-form input,.offer-form select,.offer-form textarea{min-height:45px}
+.offer-form textarea{resize:vertical}
+.offer-form .help{font-size:11px;color:var(--muted);font-weight:400}
+.offer-form button{grid-column:1/-1;justify-self:start}
+.offer-notice{grid-column:1/-1;margin:0;padding:13px 15px;border-radius:7px;background:#f2f5f5;color:#425b66;font-size:12px}
+.offer-back{display:inline-block;margin-top:25px;color:var(--navy);font-weight:700;text-decoration:none}
+@media(max-width:650px){.offer-hero{padding:42px 22px}.offer-wrap{padding:35px 17px 55px}.offer-form{grid-template-columns:1fr;padding:18px}.offer-form fieldset{grid-template-columns:1fr;padding-top:14px}.offer-form label.full,.offer-form .full,.offer-form button,.offer-notice{grid-column:1}.offer-form button{width:100%}}
+</style>
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="index.html" aria-label="Aava Marine, etusivu"><img src="assets/logo.svg" alt="Aava Marine"></a>
+  <button class="menu-button" aria-label="Avaa valikko" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  <nav id="nav">
+    <a href="index.html#valitys">Välityspalvelu</a><a href="veneet/index.html">Venekategoriat</a><a href="index.html#toiminta">Näin se toimii</a><a href="index.html#yhteys">Ota yhteyttä</a>
+    <a class="nav-cta" href="tarjoa-venetta.html">Tarjoa venettä</a>
+  </nav>
+</header>
+<main>
+<section class="offer-hero">
+  <p class="eyebrow">Aava Marine · Veneen omistajalle</p>
+  <h1>Tarjoa venettä välitykseen</h1>
+  <p>Kerro meille veneestäsi. Käymme tiedot läpi ja keskustelemme kanssasi siitä, sopisiko vene Aava Marinen välitettäväksi. Yhteistyöstä ja välitysehdoista sovitaan aina erikseen ennen toimeksiantoa.</p>
+</section>
+<div class="offer-wrap">
+  <p class="offer-intro">Voit tarjota kaikenlaisia veneitä ja vesikulkuneuvoja – esimerkiksi moottori- ja purjeveneitä, kalastusveneitä, soutuveneitä, kumiveneitä ja vesijettejä. Täytä tiedot siltä osin kuin ne ovat tiedossasi.</p>
+  <form class="offer-form" id="boat-offer-form">
+    <fieldset>
+      <legend>Veneen perustiedot</legend>
+      <label>Venetyyppi
+        <select name="type" required>
+          <option value="">Valitse venetyyppi</option><option>Moottorivene</option><option>Purjevene</option><option>Kalastusvene</option><option>Soutuvene tai pienvene</option><option>Kumivene tai RIB</option><option>Vesijetti</option><option>Muu vesikulkuneuvo</option>
+        </select>
+      </label>
+      <label>Merkki ja malli<input name="model" placeholder="Esim. Yamarin 63 DC" required></label>
+      <label>Vuosimalli<input name="year" inputmode="numeric" placeholder="Esim. 2018"></label>
+      <label>Veneen sijainti<input name="location" placeholder="Paikkakunta / satama" required></label>
+      <label>Pituus (m)<input name="length" inputmode="decimal" placeholder="Esim. 6,30"></label>
+      <label>Leveys (m)<input name="width" inputmode="decimal" placeholder="Esim. 2,40"></label>
+      <label>Moottori ja teho<span class="help">Jos veneessä on moottori</span><input name="engine" placeholder="Esim. Yamaha 150 hv"></label>
+      <label>Käyttötunnit<input name="hours" inputmode="numeric" placeholder="Esim. 420 h"></label>
+      <label>Hintapyyntö (€)<input name="price" inputmode="numeric" placeholder="Esim. 25 000"></label>
+      <label>Veneen kunto
+        <select name="condition"><option value="">Valitse tarvittaessa</option><option>Erinomainen</option><option>Hyvä</option><option>Tyydyttävä</option><option>Kunnostettava</option></select>
+      </label>
+      <label class="full">Varusteet ja tehdyt huollot<textarea name="equipment" rows="3" placeholder="Kerro esimerkiksi elektroniikasta, lämmittimestä, purjeista, huolloista ja talvisäilytyksestä."></textarea></label>
+      <label class="full">Lisätietoja veneestä<textarea name="details" rows="4" placeholder="Kerro veneen historiasta, mahdollisista vioista tai muista ostajan kannalta tärkeistä tiedoista."></textarea></label>
+    </fieldset>
+    <fieldset>
+      <legend>Yhteystietosi</legend>
+      <label>Nimi<input name="name" autocomplete="name" required></label>
+      <label>Puhelinnumero<input name="phone" type="tel" autocomplete="tel" required></label>
+      <label class="full">Sähköposti<input name="email" type="email" autocomplete="email" required></label>
+      <label class="full">Milloin sinuun voi parhaiten olla yhteydessä?<input name="contact_time" placeholder="Esim. arkisin iltapäivällä"></label>
+    </fieldset>
+    <p class="offer-notice">Tämä lomake on tällä hetkellä sivuston luonnos. Tietoja ei tallenneta eikä lähetetä Aava Marinelle. Älä lisää lomakkeeseen arkaluonteisia tai tarpeettomia henkilötietoja.</p>
+    <button class="button navy" type="submit">Tarkista lomakkeen tiedot</button>
+    <p class="form-status full" id="offer-status" role="status" aria-live="polite"></p>
+  </form>
+  <a class="offer-back" href="index.html">← Takaisin Aava Marinen etusivulle</a>
+</div>
+</main>
+<footer><a class="brand footer-brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Aava<strong>MARINE</strong></span></a><p>Veneiden ja vesikulkuneuvojen välityspalvelu.</p><small>© <span id="year"></span> Aava Marine</small></footer>
+<script src="script.js"></script>
+<script>
+const offerForm=document.querySelector("#boat-offer-form");
+if(offerForm)offerForm.addEventListener("submit",event=>{
+ event.preventDefault();
+ const status=document.querySelector("#offer-status");
+ if(!offerForm.reportValidity())return;
+ status.textContent="Tiedot on täytetty. Lomakkeen lähetys ei ole vielä käytössä, joten tietoja ei ole lähetetty eikä tallennettu. Kun vastaanottava järjestelmä liitetään sivustoon, tämän lomakkeen voi ottaa käyttöön.";
+ status.scrollIntoView({behavior:"smooth",block:"nearest"});
+});
+</script>
+</body>
+</html>
