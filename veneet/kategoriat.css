@@ -38,3 +38,23 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 .listing-contact{margin-top:35px;padding:28px;border-radius:10px;background:var(--sand);display:flex;justify-content:space-between;align-items:center;gap:18px}
 .listing-contact h2{margin-bottom:5px}.listing-contact p:last-child{margin:0;color:var(--muted);font-size:13px}.back-link{margin-top:28px;font-size:13px;font-weight:700;color:var(--navy)}
 @media(max-width:760px){.sample-listing{grid-template-columns:1fr}.sample-photo{min-height:170px}.listing-top{padding:36px 20px 28px}.listing-wrap{padding:20px 16px 45px}.listing-main-photo{min-height:230px}.listing-summary{align-items:flex-start;flex-direction:column}.spec-grid{grid-template-columns:repeat(2,1fr)}.listing-contact{align-items:flex-start;flex-direction:column}.listing-details h2,.listing-contact h2{font-size:27px}}
+
+/* Puhelimen kapeampi ja keskitetympi tekstiasettelu */
+@media(max-width:760px){
+  .category-hero{padding-left:22px;padding-right:22px}
+  .category-hero h1{max-width:12ch}
+  .category-hero p:not(.eyebrow){max-width:38ch;line-height:1.55}
+  .content{padding-left:22px;padding-right:22px}
+  .content>p:not(.eyebrow),.listing-description{max-width:58ch;line-height:1.6}
+  .listing-wrap{padding-left:22px;padding-right:22px}
+  .listing-top{padding-left:22px;padding-right:22px}
+  .listing-top h1{max-width:14ch;font-size:clamp(34px,9vw,43px)}
+  .listing-top>p:last-child{max-width:38ch}
+  .listing-summary{padding:18px}
+  .listing-details{padding-left:2px;padding-right:2px}
+  .spec-grid div{padding:12px 10px;overflow-wrap:anywhere}
+  .spec-grid strong{font-size:13px}
+  .listing-contact{padding:22px}
+  .sample-info{padding:19px}
+  .contact-strip{padding-left:22px;padding-right:22px}
+}
