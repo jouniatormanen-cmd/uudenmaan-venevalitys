@@ -42,3 +42,12 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 .listing-empty p{max-width:650px;margin:0 0 18px;color:var(--muted);font-size:14px}
 .listing-note{margin:17px auto 0;max-width:850px;color:var(--muted);font-size:11px}
 @media(max-width:760px){.listing-empty{grid-template-columns:1fr;gap:14px;padding:20px}.listing-empty h3{font-size:22px}.listing-empty .button{width:100%;text-align:center}}
+
+
+/* Veneilyaiheinen kuvagalleria */
+.boat-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1000px;margin:30px auto 0}
+.boat-gallery figure{margin:0;overflow:hidden;border-radius:10px;background:#f4f2ec}
+.boat-gallery img{display:block;width:100%;height:280px;object-fit:cover}
+.boat-gallery figcaption{padding:11px 14px;color:var(--navy);font:500 13px var(--serif)}
+.gallery-disclaimer{margin:12px auto 0;max-width:1000px;color:var(--muted);font-size:11px}
+@media(max-width:760px){.boat-gallery{grid-template-columns:1fr;gap:14px}.boat-gallery img{height:220px}}
