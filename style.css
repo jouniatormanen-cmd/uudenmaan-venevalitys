@@ -51,3 +51,45 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 .boat-gallery figcaption{padding:11px 14px;color:var(--navy);font:500 13px var(--serif)}
 .gallery-disclaimer{margin:12px auto 0;max-width:1000px;color:var(--muted);font-size:11px}
 @media(max-width:760px){.boat-gallery{grid-template-columns:1fr;gap:14px}.boat-gallery img{height:220px}}
+
+
+/* Aava Marine – viimeistelty yläpalkki ja veneaiheinen pääkuva */
+.header{
+  min-height:82px;
+  padding:10px clamp(20px,5vw,76px);
+  background:#fff;
+  border-top:4px solid var(--gold);
+  border-bottom:1px solid #e7e2d8;
+  box-shadow:0 5px 22px rgba(16,44,64,.07);
+  position:sticky;
+  top:0;
+}
+.brand img{width:158px}
+.header nav{gap:clamp(12px,1.8vw,25px);font-size:12px;letter-spacing:.025em}
+.header nav a:not(.nav-cta){padding:9px 0;position:relative}
+.header nav a:not(.nav-cta)::after{
+  content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;
+  background:var(--gold);transition:right .2s ease
+}
+.header nav a:not(.nav-cta):hover::after{right:0}
+.nav-cta{padding:12px 19px;border-radius:3px;background:var(--navy);color:#fff}
+.nav-cta:hover{background:var(--sea);color:#fff}
+.hero{
+  min-height:620px;
+  background:
+    linear-gradient(90deg,rgba(7,29,44,.82) 0%,rgba(7,29,44,.55) 48%,rgba(7,29,44,.12) 100%),
+    url('https://images.unsplash.com/photo-1729268686740-f04578ca9e36?auto=format&fit=crop&w=2000&q=85') center 48%/cover,
+    #315a70;
+}
+.hero-content{max-width:690px}
+.hero h1{max-width:12ch}
+.hero-caption{background:rgba(8,32,48,.78);border-top:1px solid rgba(214,195,164,.45)}
+@media(max-width:760px){
+  .header{min-height:68px;padding:7px 16px;border-top-width:3px}
+  .brand img{width:136px}
+  .header nav{top:100%;background:#fff;border-top:2px solid var(--gold);box-shadow:0 14px 22px rgba(16,44,64,.12)}
+  .header nav a{padding:13px 9px}
+  .header nav .nav-cta{margin-top:10px;padding:13px}
+  .hero{min-height:590px;background-position:57% center}
+  .hero-content{padding-top:62px;padding-bottom:105px}
+}
