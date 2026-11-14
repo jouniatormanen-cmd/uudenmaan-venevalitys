@@ -32,3 +32,13 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
   .contact{gap:18px}
   form{min-width:0}
 }
+
+
+/* Etusivun veneet välityksessä -osio */
+.listings{background:#fff}
+.listing-empty{display:grid;grid-template-columns:82px 1fr;gap:22px;align-items:start;max-width:850px;margin:30px auto 0;padding:28px;border:1px solid #e1e5e3;border-radius:12px;background:#fbfaf7}
+.listing-mark{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:var(--sand);color:var(--navy);font-size:29px}
+.listing-empty h3{margin:0 0 8px;color:var(--navy);font:600 24px var(--serif)}
+.listing-empty p{max-width:650px;margin:0 0 18px;color:var(--muted);font-size:14px}
+.listing-note{margin:17px auto 0;max-width:850px;color:var(--muted);font-size:11px}
+@media(max-width:760px){.listing-empty{grid-template-columns:1fr;gap:14px;padding:20px}.listing-empty h3{font-size:22px}.listing-empty .button{width:100%;text-align:center}}
